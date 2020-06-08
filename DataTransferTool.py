@@ -93,7 +93,7 @@ class Example(QWidget):
 
         print("Succesful backup")
         
-        conn=psycopg2.connect(host="db.bio2.rwth-aachen.de",database="playground", user="wiesbrock", password="6O8$pMt8")
+        conn=psycopg2.connect(host="XXXXXX",database="XXXXXXXXXX", user="XXXXXXX", password="XXXXXXXX")
         print("Login succesful")
         cur = conn.cursor()
         cur.execute("INSERT INTO datasets(dataset_id,source,destination,experimenter,project,mouse_id,date) VALUES(%s,%s,%s,%s,%s,%s,%s)",([unique_id,src,dst,experimenter,project,species,date_time]))
