@@ -102,7 +102,7 @@ class Example(QWidget):
         
        
         
-        conn=psycopg2.connect(host="db.bio2.rwth-aachen.de",database="playground", user="wiesbrock", password="6O8$pMt8")
+        conn=psycopg2.connect(host="XXXXXXXXX",database="XXXXXXXX", user="XXXXXXXX", password="XXXXXXXXXX")
         cur=conn.cursor()
         text_box=self.comboBox.currentText()
         text_box="'"+text_box+"'"
@@ -130,7 +130,7 @@ class Example(QWidget):
           
         self.comboBox2=QComboBox(self)
         
-        conn=psycopg2.connect(host="db.bio2.rwth-aachen.de",database="playground", user="wiesbrock", password="6O8$pMt8")
+        conn=psycopg2.connect(host="XXXXX",database="XXXXXX", user="XXXXXXXXX", password="XXXXXXXX")
         cur=conn.cursor()
         text_box=self.comboBox.currentText()
         text_box="'"+text_box+"'"
@@ -151,9 +151,9 @@ class Example(QWidget):
         self.id_line=QLabel(unique_id)
         self.id_label=QLabel("ID")
         self.subproject_label=QLabel("Subproject")
-        self.source_line=QLineEdit('C:/Users/wiesbrock/Desktop/Backup_source')
+        self.source_line=QLineEdit(self)
         self.source=QLabel('Source')
-        self.dst_line=QLineEdit('C:/Users/wiesbrock/Desktop/Backup_dest')
+        self.dst_line=QLineEdit(self)
         self.dst=QLabel('Destination')
         self.spec_line=QLineEdit(self)
         self.spec=QLabel('Species')
